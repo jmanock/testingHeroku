@@ -1,24 +1,26 @@
-
 {
   "name": "testingHeroku",
   "version": "1.0.0",
   "description": "Node.js using PostgreSQL",
   "main": "server.js",
   "dependencies": {
-    "http": "~0.0.0",
-    "request": "~2.36.0",
-    "express": "~4.4.5",
-    "logfmt": "~1.1.2",
     "body-parser": "~1.6.2",
-    "serve-favicon": "*",
     "cookie-parser": "~1.0.1",
+    "express": "^4.13.4",
+    "http": "~0.0.0",
     "jade": "*",
-    "jaydata" : "*",
-    "xmldom" : "*",
-    "q" : "*"
-
+    "jaydata": "*",
+    "logfmt": "~1.1.2",
+    "q": "*",
+    "request": "~2.36.0",
+    "serve-favicon": "*",
+    "xmldom": "*"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "pg":"4.x",
+    "ejs":"^2.3.1",
+    "express":"~4.9.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
