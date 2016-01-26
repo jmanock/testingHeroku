@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var stormpath = require('express-stormpath');
-var routes = require('./app/routs');
+var routes = require('./app/routes');
 var db = require('./config/db');
 var security = require('./config/security');
 

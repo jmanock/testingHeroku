@@ -53,7 +53,7 @@ var userFeedEntrySchema = new mongoose.Schema({
 userFeedEntrySchema.index({userID:1, feedID:1, feedEntryID:1, read:1});
 var UserFeedEntryModel = mongoose.model('UserFeedEntry', userFeedEntrySchema);
 
-export.addAPIRouter = function(app, mongoose, stormpath){
+exports.addAPIRouter = function(app, mongoose, stormpath){
   app.get('/*', function(req, res, next){
     res.contentType('application/json');
     next();
