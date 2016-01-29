@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Something something something dark side??</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <!-- <script src='public/myAppName/mine.js'></script> -->
+  </head>
+  <body>
+    <h2>This should maybe show up somewhere?</h2>
+    <button id='something'>Click me?</button>
+    <div class="showMe"></div>
+    <script>
+    $('#something').click(function(){
+      $.ajax({
+        url:'https://api.github.com/users/jmanock',
+        method:'GET',
+        dataType:'json',
+        success:function(data){
+          $('.showMe').html(JSON.stringify(data.name));
+        },
+        error:function(err){
+          $('.showMe').html(JSON.stringify(err));
+        }
+      });
+    })
+
+    </script>
+  </body>
+</html>
